@@ -80,6 +80,12 @@
         })
       }).catch(msg => {
       })}
+      
+      
+     /**
+     * On this function the files on docker are formatted and compared with the store_fname on attachment
+     * table in postgres, to determinate wich attachment are missing on filesystem
+     */
         
 getData()
 .then((datos)=>{
@@ -119,42 +125,4 @@ getData()
   console.log(e)
   }
 })
-     /**
-     * On this function the files on docker are formatted and compared with the store_fname on attachment
-     * table in postgres, to determinate wich attachment are missing on filesystem
-     */
-
-     
-    // setTimeout(async ()=>{
-    //   console.log(files.replace(/\n+/g, ',').split(',').length)
-    //   try{
-    //     if(files){
-    //       const dataSet = files.replace(/\n+/g, ',').split(',');
-    //       setTimeout(()=>{
-    //         let list=[]
-    //     for (let i = 0; i < result.rows.length; i++) {
-    //       let flag= false
-    //       const element = result.rows[i];
-    //       for (let j = 0; j < dataSet.length; j++) {
-    //         const element2 = dataSet[j];
-    //         if(element.name.split('/')[1].localeCompare(element2) === 0){
-    //           flag = true;
-    //           break;
-    //         }
-    //       }
-    //       if(!flag){
-    //       list.push(element);
-    //       // console.log(element)
-    //     }
-    //     }
-    //       console.log(list)
-    //       },1000)
-        
-    //     }
-        
-    //     }catch(error){
-    //       console.log(error);
-    //     }
-    // },3000)
-
     
